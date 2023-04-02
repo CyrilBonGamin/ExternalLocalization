@@ -75,12 +75,12 @@ while(1):
     else:
         angle = 57.3 * math.atan2((center_y[0] - center_y[1]), (center_x[0] - center_x[1]))
 
-    cv2.putText(result, str(int(angle)), (80, 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 2)
+    cv2.putText(result, str(int(angle)), (100, 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 2)
 
     X = (((center_x[0] + center_x[1])/2) * 1.06)/100
     Y = (((center_y[0] + center_y[1])/2) * 1.17)/100
 
-    cv2.putText(result, (str(round(X, 1)) + " " + str(round(Y, 1))), (10, 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 2)
+    cv2.putText(result, (str(round(X, 2)) + " " + str(round(Y, 2))), (10, 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 2)
 
     # Отображение результата
     cv2.imshow('result', result)

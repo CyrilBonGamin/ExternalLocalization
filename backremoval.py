@@ -68,7 +68,7 @@ while(ret):
             x, y, w, h = cv2.boundingRect(contour)
             cx = int((x + x + w) / 2)
             cy = int((y + y + h) / 2)
-            cv2.putText(frame, (str(round((cx*1.06)/100, 1)) +" "+ str(round((cy*1.17)/100, 1))), (x, y - 10),
+            cv2.putText(frame, (str(round((cx*1.06)/100, 2)) +" "+ str(round((cy*1.17)/100, 2))), (x, y - 10),
                         cv2.FONT_HERSHEY_PLAIN, 1, (0, 0, 255), 2)
             cv2.circle(frame, (cx, cy), 3, (0, 0, 255), -1)
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
